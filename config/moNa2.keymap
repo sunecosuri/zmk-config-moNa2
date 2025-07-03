@@ -15,11 +15,6 @@
     combos {
         compatible = "zmk,combos";
 
-        right-command {
-            bindings = <&kp RIGHT_COMMAND>;
-            key-positions = <40 41>;
-        };
-
         tab {
             bindings = <&none>;
             key-positions = <10 11>;
@@ -82,7 +77,7 @@
             bindings = <
 &kp NUMBER_1      &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5                                    &kp NUMBER_6       &kp N7     &kp N8                 &kp N9     &kp N0
 &trans            &trans        &trans        &trans        &trans     &trans       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LPAR   &kp RIGHT_PARENTHESIS  &kp MINUS  &kp PLUS
-&kp LEFT_CONTROL  &trans        &trans        &trans        &kp LG(C)  &kp LG(V)    &kp LESS_THAN     &kp GREATER_THAN   &kp TILDE  &trans                 &trans     &trans
+&kp LEFT_CONTROL  &trans        &trans        &kp LG(X)     &kp LG(C)  &kp LG(V)    &kp LESS_THAN     &kp GREATER_THAN   &kp TILDE  &trans                 &trans     &trans
 &kp LEFT_SHIFT    &trans        &trans        &trans        &trans     &trans       &trans            &trans                                                          &kp RIGHT_SHIFT
             >;
 
@@ -100,10 +95,10 @@
 
         layer_3 {
             bindings = <
-&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                     &trans          &kp UP_ARROW    &trans     &trans  &trans
-&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &trans  &trans
-&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans    &trans  &trans          &trans          &trans     &trans  &trans
-&trans          &trans                  &trans          &trans                   &trans   &trans    &trans  &trans                                             &kp RIGHT_SHIFT
+&kp ESCAPE  &trans  &trans  &trans  &trans                          &trans  &trans        &trans              &kp LG(BACKSPACE)  &kp BACKSPACE
+&trans      &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans        &kp RA(UP_ARROW)    &trans             &trans
+&trans      &trans  &trans  &trans  &kp LG(C)  &kp LG(V)    &trans  &trans  &kp RA(LEFT)  &kp RA(DOWN_ARROW)  &kp RA(RIGHT)      &kp RG(RS(RIGHT))
+&trans      &trans  &trans  &trans  &trans     &trans       &trans  &trans                                                       &kp RIGHT_SHIFT
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -111,10 +106,10 @@
 
         layer_4 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans        &trans            &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans        &kp RG(UP_ARROW)  &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp RG(LEFT)  &kp RG(DOWN)      &kp RG(RIGHT)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                                 &trans
             >;
         };
 
@@ -131,10 +126,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                          &trans             &kp RA(RG(LG(LEFT_ARROW)))  &kp RG(R)  &kp RG(RA(RIGHT_ARROW))  &trans
-&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans             &mkp MB1                    &mkp MB3   &mkp MB2                 &trans
-&trans  &trans  &trans  &trans  &kp LG(C)  &kp LG(V)    &trans  &trans             &trans                      &trans     &trans                   &trans
-&trans  &trans  &trans  &trans  &trans     &trans       &trans  &kp RIGHT_COMMAND                                                                  &kp RIGHT_SHIFT
+&trans  &trans  &trans  &trans  &trans                          &trans             &kp RA(RG(LEFT_ARROW))  &kp RG(R)  &kp RG(RA(RIGHT_ARROW))  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans             &mkp MB1                &mkp MB3   &mkp MB2                 &trans
+&trans  &trans  &trans  &trans  &kp LG(C)  &kp LG(V)    &trans  &trans             &trans                  &trans     &trans                   &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans  &kp RIGHT_COMMAND                                                              &kp RIGHT_SHIFT
             >;
 
             sensor-bindings = <&scroll_up_down>;
